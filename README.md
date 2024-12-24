@@ -48,6 +48,12 @@ Este repositorio contiene el desarrollo de un sistema basado en Inteligencia Art
 ## Instalación
 
 - **Clonar el repositorio**
-  '''
+  ```
   git clone https://github.com/tu-usuario/sistema-correccion-notas.git
   cd sistema-correccion-notas
+
+- **Crear un entorno virtual e instalar dependencias**
+  ```
+  python -m venv env
+  source env/bin/activate # En Windows: env\Scripts\activate
+  pip install -r requirements.txt
