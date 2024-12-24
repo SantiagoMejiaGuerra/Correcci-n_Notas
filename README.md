@@ -11,6 +11,8 @@ Este repositorio contiene el desarrollo de un sistema basado en Inteligencia Art
   - [Tecnologías Utilizadas](#tecnologías-utilizadas)
   - [Requisitos Previos](#requisitos-previos)
   - [Instalación](#instalación)
+  - [Ejecución del Proyecto](#ejecución-del-proyecto)
+  - [Contacto](#contacto)
 
 
 ------------
@@ -57,3 +59,14 @@ Este repositorio contiene el desarrollo de un sistema basado en Inteligencia Art
   python -m venv env
   source env/bin/activate # En Windows: env\Scripts\activate
   pip install -r requirements.txt
+
+## Ejecución del Proyecto
+
+1. **Iniciar el backend:**
+   ```
+   uvicorn Notas:app --reload
+
+2. **Abrir el frontend:** Abre el archivo *Prueba.html* en tu navegador para interactuar con la aplicación
+
+## Contacto
+Si tienes preguntas, comentarios, o deseas contribuir a este proyecto, no dudes en contactarme a santiagomejiag.smg@gmail.com. o ![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)(https://www.linkedin.com/in/santiago-mejia-guerr/)
