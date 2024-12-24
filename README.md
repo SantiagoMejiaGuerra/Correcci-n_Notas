@@ -69,4 +69,4 @@ Este repositorio contiene el desarrollo de un sistema basado en Inteligencia Art
 2. **Abrir el frontend:** Abre el archivo *Prueba.html* en tu navegador para interactuar con la aplicación
 
 ## Contacto
-Si tienes preguntas, comentarios, o deseas contribuir a este proyecto, no dudes en contactarme a santiagomejiag.smg@gmail.com. o ![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)(https://www.linkedin.com/in/santiago-mejia-guerr/)
+Si tienes preguntas, comentarios, o deseas contribuir a este proyecto, no dudes en contactarme a santiagomejiag.smg@gmail.com. o ![LinkedIn](https://www.linkedin.com/in/santiago-mejia-guerr/)
