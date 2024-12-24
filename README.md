@@ -4,6 +4,17 @@ Este repositorio contiene el desarrollo de un sistema basado en Inteligencia Art
 
 ------------
 
+## Tabla de contenido
+- [Sistema de Corrección de Notas Médicas con Inteligencia Artificial](#sistema-de-corrección-de-notas-médicas-con-inteligencia-artificial)
+  - [Tabla de contenido](#tabla-de-contenido)
+  - [Características Principales](#características-principales)
+  - [Tecnologías Utilizadas](#tecnologías-utilizadas)
+  - [Requisitos Previos](#requisitos-previos)
+  - [Instalación](#instalación)
+
+
+------------
+
 ## Características Principales
 - Corrección de errores gramaticales y ortográficos en tiempo real.
 
@@ -27,4 +38,16 @@ Este repositorio contiene el desarrollo de un sistema basado en Inteligencia Art
 
 ------
 
+## Requisitos Previos
+1. Python (versión 3.9 o superior)
+2. HTML, CSS y JavaScript (**OPCIONAL**, si deseas personalizar mejor el front puedes usar Node.js)
+3. Una clave de acceso a la API de Groq (*Link del video explicativo-->* **https://www.youtube.com/watch?v=J8JkqTrNDjA&t=435s**)
 
+--------
+
+## Instalación
+
+- **Clonar el repositorio**
+  '''
+  git clone https://github.com/tu-usuario/sistema-correccion-notas.git
+  cd sistema-correccion-notas
