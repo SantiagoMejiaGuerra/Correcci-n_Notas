@@ -3,3 +3,4 @@ streamlit
 pydantic
 fastapi
 uvicorn
+rapidfuzz

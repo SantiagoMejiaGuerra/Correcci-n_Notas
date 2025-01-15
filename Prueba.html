@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corrector de Notas Médicas</title>
+    <title>Análisis de Notas Médicas</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -51,7 +51,6 @@
             margin-top: 10px;
         }
 
-        /* Estilos para la ventana emergente */
         .modal {
             display: none;
             position: fixed;
@@ -98,21 +97,20 @@
 </head>
 <body>
     <div class="container">
-        <h1>Corrector de Notas Médicas</h1>
+        <h1>Análisis de Notas Médicas</h1>
         <textarea id="noteInput" placeholder="Escribe la nota médica aquí..."></textarea>
-        <button onclick="analyzeNote()">Corregir Nota</button>
+        <button onclick="analyzeNote()">Analizar Nota</button>
 
         <div class="error" id="errorMessage" style="display: none;"></div>
     </div>
 
-    <!-- Modal -->
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Resultado de la corrección</h2>
+            <h2>Resultado del análisis</h2>
             <p><strong>Texto Original:</strong></p>
             <pre id="originalText"></pre>
-            <p><strong>Texto Corregido:</strong></p>
+            <p><strong>Texto Sugerido:</strong></p>
             <pre id="correctedText"></pre>
         </div>
     </div>
@@ -128,7 +126,6 @@
                 return;
             }
 
-            // Limpiar errores previos
             errorMessage.style.display = 'none';
 
             try {
@@ -146,11 +143,9 @@
 
                 const data = await response.json();
 
-                // Llenar los campos del modal con el texto original y corregido
                 document.getElementById("originalText").innerText = data.original_text;
                 document.getElementById("correctedText").innerText = data.corrected_text;
 
-                // Mostrar el modal
                 document.getElementById("myModal").style.display = "block";
             } catch (error) {
                 errorMessage.style.display = 'block';
@@ -158,12 +153,10 @@
             }
         }
 
-        // Función para cerrar el modal
         function closeModal() {
             document.getElementById("myModal").style.display = "none";
         }
 
-        // Cerrar el modal si el usuario hace clic fuera de él
         window.onclick = function(event) {
             const modal = document.getElementById("myModal");
             if (event.target == modal) {
@@ -173,4 +166,3 @@
     </script>
 </body>
 </html>
-
