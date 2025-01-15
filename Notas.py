@@ -10,7 +10,7 @@ Aqui te dejo un video explicativo de como adquirir tu API KEY en GROQ
 
 https://www.youtube.com/watch?v=J8JkqTrNDjA&t=435s
 """
-client= Groq(api_key="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")
+client= Groq(api_key="Aqui_va_tu_API_Key_inidicada_en_el_video")
 
 # Creamos la app
 app = FastAPI()
