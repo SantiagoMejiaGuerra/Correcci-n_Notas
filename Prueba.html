@@ -93,6 +93,14 @@
             border-radius: 4px;
             margin-top: 20px;
         }
+
+        /* span{
+            background-color: yellow;
+            color: black;
+            font-weight: bold;
+            border-radius: 3px;
+            padding: 0 2px;
+        } */
     </style>
 </head>
 <body>
@@ -144,7 +152,7 @@
                 const data = await response.json();
 
                 document.getElementById("originalText").innerText = data.original_text;
-                document.getElementById("correctedText").innerText = data.corrected_text;
+                document.getElementById("correctedText").innerHTML = highlight(data.corrected_text);
 
                 document.getElementById("myModal").style.display = "block";
             } catch (error) {
@@ -155,6 +163,15 @@
 
         function closeModal() {
             document.getElementById("myModal").style.display = "none";
+        }
+
+        function highlight(text){
+            const keywords = ["IZQUIERDO", "DERECHO", "DERECHA", "IZQUIERDA", "MASCULINO",  "FEMENINO", "ESPECIFICAR", "GÉNERO"];
+            const regex = new RegExp(`\\b(${keywords.join("|")})\\b`, "g");
+            return text.replace(
+                regex,
+                (match) => `<span style="background-color: yellow; color: black; font-weight: bold;">${match}</span>`
+            );
         }
 
         window.onclick = function(event) {

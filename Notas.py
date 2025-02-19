@@ -10,7 +10,7 @@ Aqui te dejo un video explicativo de como adquirir tu API KEY en GROQ
 
 https://www.youtube.com/watch?v=J8JkqTrNDjA&t=435s
 """
-client= Groq(api_key="Aqui_va_tu_API_Key_inidicada_en_el_video")
+client= Groq(api_key="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")
 
 # Creamos la app
 app = FastAPI()
@@ -34,7 +34,7 @@ class NoteResponse(BaseModel):
 def get_ai_response(messages):
     try:
         completion =client.chat.completions.create(
-            model="llama-3.1-70b-versatile",
+            model="llama-3.3-70b-versatile",
             messages=messages,
             temperature=0.7,
             max_tokens=1024,
@@ -69,8 +69,8 @@ async def analyze_note(request: NoteRequest):
         messages = [
             {"role": "system", "content": (
                 "Eres un experto en corrección de notas médicas. Corrige ortografía, gramática y asegura que las palabras médicas sean precisas. "
-                "Además, indica la lateralidad del cuerpo humano entre corchetes cuando sea necesario. Si no se especifica el género del paciente en el texto, "
-                "indícalo con una nota entre corchetes: [Especificar género: masculino/femenino]."
+                "Además, indica la lateralidad del cuerpo humano con MAYUSCULA  (por ejemplo: brazo IZQUIERDO o pierna DERECHA) cuando sea necesario. Si no se especifica el género del paciente en el texto, "
+                "indícalo con una nota en MAYUSCULA: [ESPECIFICAR GÉNERO: MASCULINO/FEMENINO]. Dame la respuesta siempre en español"
             )},
             {"role": "user", "content": request.text},
         ]
